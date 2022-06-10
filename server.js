@@ -15,7 +15,6 @@ var db = mysql.createPool({
   host: process.env.HOST,
   database: process.env.DB
 })
-module.exports = db
 
 db.getConnection((err) => {
   if (err) {
