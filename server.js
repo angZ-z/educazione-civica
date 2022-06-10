@@ -1,4 +1,4 @@
-const dbConfig = require("./db.config.js")
+require('dotenv').config();
 const express = require('express')
 app = express()
 
@@ -10,10 +10,10 @@ app.use(express.json())
 
 const mysql = require('mysql')
 var db = mysql.createPool({
-  user: dbConfig.USER,
-  password: dbConfig.PASSWORD,
-  host: dbConfig.HOST,
-  database: dbConfig.DB
+  user: process.env.USER,
+  password: process.env.PASSWORD,
+  host: process.env.HOST,
+  database: process.env.DB
 })
 module.exports = db
 
