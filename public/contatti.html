@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Esame</title>
+      <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" type="text/css" href="index.css">
+  </head>
+
+  <body>
+    <!-- Navbar Section Start-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+              <a class="navbar-brand active" href="index.html">arcangelo sanseviero</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="ed_civica.html">Educazione Civica</a></li>
+                  <li><a href="PCTO.html">PCTO</a></li>
+                  <li><a href="#">Contatti</a></li>                  
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar Section End -->
+
+
+    <!-- Header Section Start -->
+    
+    	<!-- ==============================================
+		CONTACT
+		=============================================== -->
+		<section id="contact" class="add-padding border-top-color2">
+		
+			<div class="container text-center">
+				
+				<div class="row">
+				
+					<div class="col-sm-6 col-md-5 text-right scrollimation fade-up d1">
+					
+						<h1 class="big-text">Contact Me</h1>
+						
+						<p class="lead">Ciao, in questa pagina puoi contattarmi.<br> <br> Puoi scrivere il tuo messaggio nel form di fianco. In alternativa, puoi scrivermi via <a href = "mailto: sansevieroarcangelo@gmail.com">mail</a>. <br><br> Puoi visualizzare lo storico dei tuoi messaggi <a target="_blank" href="storico.html">qui</a>.
+            </p>
+						
+					</div>
+				
+					<!--=== Contact Form ===-->
+
+					<form id="contact-form" class="col-sm-6 col-md-offset-1 scrollimation fade-left d3">
+						
+						<div class="form-group">
+						  <label class="control-label">Name</label>
+						  <div class="controls">
+							<input id="contact-name" placeholder="Your name" class="form-control requiredField">
+							<i class="fa fa-user"></i>
+						  </div>
+						</div><!-- End name input -->
+						
+						<div class="form-group">
+						  <label class="control-label" for="contact-mail">Email</label>
+						  <div class=" controls">
+							<input id="contact-mail" placeholder="Your email" class="form-control requiredField">
+							<i class="fa fa-envelope"></i>
+						  </div>
+						</div><!-- End email input -->
+						
+						<div class="form-group">  
+						  <label class="control-label">Message</label>
+							<div class="controls">
+								<textarea id="contact-message" placeholder="Your message" class="form-control requiredField" rows="6"></textarea>
+								<i class="fa fa-comment"></i>
+							</div>
+						</div><!-- End textarea -->
+						
+						<p><button onclick="setup();" name="submit" id="submit" class="btn btn-color2 btn-block"><i class="fa fa-paper-plane"></i>Send Message</button></p>
+						
+					</form><!-- End contact-form -->
+					
+				</div>
+				
+			</div>
+		
+		</section>
+
+    <!-- Header Section End -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
