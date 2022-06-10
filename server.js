@@ -66,7 +66,7 @@ app.post('/storico', (req, res) => {
           mail: row.mail,
           message: String(row.message)
         }
-        console.log(`query operated`)
+        console.log(`query successfully operated`)
         res.json(info)
       })  
     }
