@@ -1,4 +1,3 @@
-const { json } = require("express")
 
 async function setup() {
 
