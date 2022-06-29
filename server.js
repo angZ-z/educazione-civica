@@ -29,12 +29,10 @@ db.getConnection((err) => {
 app.post('/contatti', (req, res) => {
   time = get_time()
   const ip = req.connection.remoteAddress
-  console.log('\nrequest from', ip)
   
   const data = req.body
   data.IP = ip
   data.time = get_time()
-
 
   db.query("INSERT INTO contatti (name, mail, message, IP, time) VALUES ('" + data.contact_name + "', '" + data.mail + "' , '" + data.message + "', '" + data.IP + "', '" + data.time + "');", (err, result) => {
     if (err) {
@@ -52,12 +50,12 @@ app.post('/contatti', (req, res) => {
 
 app.post('/storico', (req, res) => {
   const data = req.body
-  console.log(data)
 
-  db.query("SELECT name, mail, message, time FROM contatti WHERE mail =?;", (data.mail_input), (err, result) => {
+  db.query("SELECT name, mail, message, time FROM contatti WHERE mail =?;", (data.mail_input), (err, result, rows) => {
     if (err) {
       console.log(err.message)
     } else {
+
       Object.keys(result).forEach((key) => {
         var row = result[key]
         
@@ -68,6 +66,7 @@ app.post('/storico', (req, res) => {
         }
         console.log(`query successfully operated`)
         res.json(info)
+        console.log(info)
       })  
     }
   })
