@@ -38,12 +38,12 @@ app.post('/contatti', (req, res) => {
     if (err) {
       console.log(err.message)
     } else {
-      console.log('database successfully updated')
+      console.log('database updated')
     }
   })
 
   res.json({
-    status: 'message sent',
+    status: 'data sent',
     time: get_time()
   })
 })
@@ -51,20 +51,19 @@ app.post('/contatti', (req, res) => {
 app.post('/storico', (req, res) => {
   const data = req.body
 
-  db.query("SELECT name, mail, message, time FROM contatti WHERE mail =?;", (data.mail_input), (err, result, rows) => {
+  db.query("SELECT name, mail, message, time FROM contatti WHERE mail =?;", (data.mail_input), (err, result) => {
     if (err) {
       console.log(err.message)
     } else {
-
       Object.keys(result).forEach((key) => {
         var row = result[key]
         
         const info = {
-          name: row.name,
-          mail: row.mail,
+          time: row.time,
           message: String(row.message)
         }
-        console.log(`query successfully operated`)
+
+        console.log(`query operated`)
         res.json(info)
         console.log(info)
       })  

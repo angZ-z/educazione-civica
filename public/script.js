@@ -15,12 +15,12 @@ async function setup() {
 
   const res = await fetch('/contatti', options)
   const json = await res.json()
-  console.log(json)
+  console.log(json) 
 } 
 
 async function search() {
 
-  var mail_input = document.getElementById('email_search').value
+  var mail_input = document.getElementById('mail_input').value
   data = {mail_input}
 
   const options = {
@@ -30,9 +30,21 @@ async function search() {
   }
 
   const res = await fetch('/storico', options)
-  json = res.json()
-  console.log(json)
-}
+  const info = await res.json();
+
+      const root = document.createElement('p');
+      const time = document.createElement('h3');
+      const message = document.createElement('h4');
+    
+      time.textContent = info.time;
+      message.textContent = info.message;
+
+      root.append(time, message);
+      document.body.append(root);
+  
+    console.log(info);
+  }
+
 
 
 
