@@ -12,9 +12,9 @@ const mysql = require('mysql')
 require('dotenv').config();
 var db = mysql.createPool({
   host: process.env.HOST,
+  database: process.env.DB,
   user: process.env.USER,
-  password: process.env.PASSWORD,
-  database: process.env.DB
+  password: process.env.PASSWORD
 })
 
 db.getConnection((err) => {
