@@ -39,6 +39,7 @@ app.post('/contatti', (req, res) => {
       console.log(err.message)
     } else {
       console.log('database updated')
+      console.log(result)
     }
   })
 
@@ -65,7 +66,6 @@ app.post('/storico', (req, res) => {
 
         console.log(`query operated`)
         res.json(info)
-        console.log(info)
       })  
     }
   })
