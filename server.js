@@ -54,7 +54,7 @@ app.post('/storico', (req, res) => {
   const data = req.body
   console.log(data)
 
-  db.query("SELECT name, mail, message, time FROM contatti WHERE mail =d?;", (data.mail_input), (err, result) => {
+  db.query("SELECT name, mail, message, time FROM contatti WHERE mail =?;", (data.mail_input), (err, result) => {
     if (err) {
       console.log(err.message)
     } else {
