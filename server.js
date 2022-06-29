@@ -10,7 +10,7 @@ app.use(express.json())
 
 const mysql = require('mysql')
 var db = mysql.createPool({
-  host: process.env.HOST,
+  host: 'oliadkuxrl9xdugh.chr7pe7iynqr.eu-west-1.rds.amazonaws.com',
   user: process.env.USER,
   password: process.env.PASSWORD,
   database: process.env.DB
