@@ -11,10 +11,10 @@ app.use(express.json())
 const mysql = require('mysql')
 require('dotenv').config();
 var db = mysql.createPool({
-  host: process.env.HOST,
-  database: process.env.DB,
-  user: process.env.USER,
-  password: process.env.PASSWORD
+  host: 'eu-cdbr-west-03.cleardb.net',
+  database: 'heroku_80d908fd800ad29',
+  user: 'b42c56c82e3006',
+  password: '189c6f68'
 })
 
 db.getConnection((err) => {
