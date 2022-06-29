@@ -1,3 +1,29 @@
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body { 
+  margin:0;
+  padding:0;
+	perspective: 1px;
+	transform-style: preserve-3d;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family: Nunito;
+}
+
+h1 {
+   font-size: 250%
+}
+
+p {
+  font-size: 140%;
+  line-height: 150%;
+  color: #333;
+}
+
 .slide {
   position: relative;
   padding: 25vh 10%;
@@ -8,7 +34,24 @@
 	transform-style: inherit;
 }
 
-.PCTO_img {
+#slide1_img {
+  position: absolute;
+  top: 40%;
+  left: 65%;
+  width: 320px;
+  height: 240px;
+  transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(2deg);
+  padding: 10px;
+  border-radius: 5px;
+  background: rgba(240,230,220, .7);
+  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+}
+
+#slide1_img:last-of-type {
+  transform: translateZ(.4px) scale(.6) translateX(-104%) translateY(-40%) rotate(-5deg);
+}
+
+#slide2_img {
   position: absolute;
   top: 50%;
   left: 35%;
@@ -21,7 +64,7 @@
   box-shadow: 0 0 8px rgba(0, 0, 0, .7);
 }
 
-img:last-of-type {
+#slide2_img:last-of-type {
   transform: translateZ(.4px) scale(.6) translateX(-104%) translateY(-40%) rotate(-5deg);
 }
 
