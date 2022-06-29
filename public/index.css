@@ -1,6 +1,6 @@
 /*********** Navbar Section Start ***********/
 .navbar-inverse {
-    background: linear-gradient( to right top, rgba(255, 0, 0, 0.8), rgba(25, 0, 255, 0.8));
+    background: black
 }
 
 .navbar-inverse .navbar-nav>li>a {
