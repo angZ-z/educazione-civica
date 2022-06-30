@@ -1,41 +1,98 @@
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <title>PCTO</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="PCTO.css">
-</head>
-<body>
-  <div id="title" class="slide header">
-    <h1>Pure CSS Parallax</h1>
-  </div>
-  
-  <div id="slide1" class="slide">
-    <div class="title">
-      <h1>Slide 1</h1>
-      <p>Lorem ipsum dolor sit amet, in velit iudico mandamus sit, persius dolorum in per, postulant mnesarchum cu nam. Malis movet ornatus id vim, feugait detracto est ea, eam eruditi conceptam in. Ne sit explicari interesset. Labores perpetua cum at. Id viris docendi denique vim.</p>
+  <head>
+      <title>PCTO</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- nav bar links -->
+      <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" type="text/css" href="index.css">
+  </head>
+
+  <body>
+    <!-- Navbar Section Start-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand active" href="index.html">arcangelo sanseviero</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="ed_civica.html">Educazione Civica</a></li>
+                  <li><a href="PCTO.html">PCTO</a></li>
+                  <li><a href="contatti.html">Contatti</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar Section End -->
+
+    <!-- Main section start -->
+    <div class="slider__warpper">
+
+      <div class="flex__container flex--pikachu flex--active" data-slide="1"> <!-- INTRO -->
+        <div class="flex__item flex__item--left">
+          <div class="flex__content">
+            <p class="text--sub"><u>ALTERNANZA SCUOLA - LAVORO</u></p>
+            <h1 class="text--big">III Anno</h1>
+            <p class="text--normal">In collaborazione con il MIUR e l'INAIL abbiamo seguito un corso sulla sicurezza sui luoghi di lavoro. In seguito, abbiamo svolto un test individuale che ci indirizzasse ad un futuro lavoro. Infine abbiamo conosciuto gli esperti dell'UBI Banca e della Feduf.</p>
+          </div>
+          <p class="text__background">PCTO</p>
+        </div>
+        
+        <div class="flex__item flex__item--right"></div>
+        </div>
+      <!-- FINE INTRO -->
+
+
+      <div class="flex__container flex--piplup animate--start" data-slide="2"> <!-- DIRITTO -->
+        <div class="flex__item flex__item--left">
+          <div class="flex__content">
+            <p class="text--sub"><u>ALTERNANZA SCUOLA - LAVORO</u></p>
+            <h1 class="text--big">IV Anno</h1>
+            <p class="text--normal">Abbiamo iniziato con l'organizzazione di una start-up. Grazie al progetto "Che impresa ragazzi", che ha approfondito l'idea imprenditoriale e di business plan, abbiamo ideato un piano per l'apertura di un nostro ipotetico bar.
+            Concludendo il nostro VI anno con progetti su compresione dei test e di logica per la preparazione a test universitari e concorsi (SKILLS2)</p>
+          </div>
+            <p class="text__background">PCTO</p>
+        </div>
+        <div class="flex__item flex__item--right">
+        </div>  
+      </div>
+
+      <div class="flex__container flex--blaziken animate--start" data-slide="3"> <!-- MATEMATICA -->
+        <div class="flex__item flex__item--left">
+          <div class="flex__content">
+            <p class="text--sub"><u>ALTERNANZA SCUOLA - LAVORO</u></p>
+            <h1 class="text--big">V Anno</h1>
+            <p class="text--normal">Abbiamo tenuto in presenza nuovamente il progetto per quanto riguarda il bilancio delle Competenze Individuali.
+            Insieme ad un esperto abbiamo intrapreso un percorso di potenziamento di "educazione affettivo relazionale" con l'intento di prepararci ad affrontare sfide che si possono presentare nel futuro.
+            Ed in conclusione abbiamo seguito gli orientamenti universitari online.</p>
+          </div>
+            <p class="text__background">PCTO</p>
+        </div>
+        <div class="flex__item flex__item--right">
+        </div>
+      </div>  
+      <!-- FINE MATEMATICA -->
+
+      
+      <div class="slider__navi"> <!-- INDEX -->
+      <a href="#" class="slide-nav active" data-slide="1">III</a>
+      <a href="#" class="slide-nav" data-slide="2">IV</a>
+      <a href="#" class="slide-nav" data-slide="3">V</a>  
     </div>
-    <img id="slide1_img" src="https://lorempixel.com/640/480/abstract/6/">
   </div>
-  
-  <div id="slide2" class="slide">
-    <div class="title">
-      <h1>Slide 2</h1>
-      <p>Lorem ipsum dolor sit amet, in velit iudico mandamus sit, persius dolorum in per, postulant mnesarchum cu nam. Malis movet ornatus id vim, feugait detracto est ea, eam eruditi conceptam in. Ne sit explicari interesset. Labores perpetua cum at. Id viris docendi denique vim.</p>
-    </div>
-    <img id="slide2_img" src="images/scioperi.jpg">
-    <img id="slide2_img" src="https://lorempixel.com/640/480/abstract/4/"> 
-  </div>
-  
-  <div id="slide3" class="slide">
-    <div class="title">
-      <h1>Slide 3</h1>
-      <p>Lorem ipsum dolor sit amet, in velit iudico mandamus sit, persius dolorum in per, postulant mnesarchum cu nam. Malis movet ornatus id vim, feugait detracto est ea, eam eruditi conceptam in. Ne sit explicari interesset. Labores perpetua cum at. Id viris docendi denique vim.</p>
-    </div>
-    <img id="slide1_img" src="https://lorempixel.com/640/480/abstract/6/">
-  </div>
-</body>
+  <!-- Main section end -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> <!-- jquery link --> 
+    <script src="script.js"></script>
+  </body>
 </html>

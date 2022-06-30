@@ -38,7 +38,7 @@ app.post('/contatti', (req, res) => {
     if (err) {
       console.log(err.message)
     } else {
-      console.log('database updated')
+      console.log('database updated by', ip)
       console.log(result)
     }
   })
@@ -51,6 +51,8 @@ app.post('/contatti', (req, res) => {
 
 app.post('/storico', (req, res) => {
   const data = req.body
+  const ip = req.connection.remoteAddress
+
 
   db.query("SELECT name, mail, message, time FROM contatti WHERE mail =?;", (data.mail_input), (err, result) => {
     if (err) {
@@ -64,7 +66,7 @@ app.post('/storico', (req, res) => {
           message: String(row.message)
         }
 
-        console.log(`query operated`)
+        console.log('query operated by', ip)
         res.json(info)
       })  
     }
