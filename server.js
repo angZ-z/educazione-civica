@@ -63,6 +63,7 @@ app.post('/storico', (req, res) => {
         
         const info = {
           time: row.time,
+          name: row.name, 
           message: String(row.message)
         }
 

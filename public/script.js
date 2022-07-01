@@ -36,7 +36,7 @@ async function search() {
       const time = document.createElement('h3');
       const message = document.createElement('h4');
     
-      time.textContent = info.time;
+      time.textContent = `${info.time} da ${info.name.replace(/^\w/, (c) => c.toUpperCase())}`;
       message.textContent = info.message;
 
       root.append(time, message);
